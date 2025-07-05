@@ -1,0 +1,16 @@
+
+.Animated-typing{
+    margin: 15%;
+    padding: 15%;
+    font-size: 3rem;
+    color:aqua;
+    font-weight:600;
+    text-shadow:2px 2px black;
+}
+*{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 400; */
+  font-style: normal;
+  color: black;
+}
