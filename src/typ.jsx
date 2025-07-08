@@ -25,8 +25,8 @@
               <Cursor/>
             </h1> */}
             <div className="social-links">
-              <a href="http://github.com/Varunn4875"><i className="bi bi-github fw-bold text-black"></i></a>
-              <a href="#"><i className="bi bi-instagram fw-bold text-black"></i></a>
+              <a href="http://github.com/Varunn4875" target='_blank' rel='noopener noreferrer'><i className="bi bi-github fw-bold text-black"></i></a>
+              <a href="https://www.instagram.com/varunn_4875?igsh=MXNleXlwMzlmNXVubQ==" target='_blank' rel='noopener noreferrer'><i className="bi bi-instagram fw-bold text-black"></i></a>
               <a href="https://wa.me/919360141042"><i className="bi bi-whatsapp fw-bold text-black"></i></a>
                <a href="https://www.linkedin.com/in/varunselvakumar4875/" target='_blank' rel='noopener noreferrer'><i className="bi bi-linkedin fw-bold text-black"></i></a>
            
