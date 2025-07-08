@@ -28,7 +28,7 @@
               <a href="http://github.com/Varunn4875"><i className="bi bi-github fw-bold text-black"></i></a>
               <a href="#"><i className="bi bi-instagram fw-bold text-black"></i></a>
               <a href="https://wa.me/919360141042"><i className="bi bi-whatsapp fw-bold text-black"></i></a>
-               <a href="https://wa.me/919360141042"><i className="bi bi-linkedin fw-bold text-black"></i></a>
+               <a href="www.linkedin.com/in/varun-selvakumar-8976891a7"><i className="bi bi-linkedin fw-bold text-black"></i></a>
            
             </div>
           </div>
