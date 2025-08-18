@@ -13,7 +13,7 @@ function AboutSection(){
           {/* <div className="col-lg-4">
             <img src="assets/img/profile-img.jpg" className="img-fluid" alt="">
           </div> */}
-          <div className="col-lg-8 content" style={{textAlign:'justify'}}>
+          <div className="col-lg-8 content"style={{textAlign:'justify'}}>
             {/* <h1>Know Who I Am</h1> */}
             <h3 className=" py-3">
               Hi Everyone, I am Varun from Karur, India.
@@ -24,9 +24,24 @@ function AboutSection(){
              <h3 className=" py-3">
              I have completed Bachelors of computer Applications.
             </h3>
-             <h3 className=" py-3">
-              Apart from coding, I love to do are Running,Reading Novels and playing Badminton.
+             <h3 className="coding py-3">
+              Apart from coding, I like to do are 
             </h3>
+            <ul>
+             <li><h3 className=" py-3">
+              Running
+            </h3>
+            </li>
+            <li><h3 className=" py-3">
+                Reading Novels
+            </h3>
+            </li>
+            <li><h3 className=" py-3">
+              Playing Badminton
+            </h3>
+            </li>
+            </ul>
+
           </div>
         </div>
 

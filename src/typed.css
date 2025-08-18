@@ -39,6 +39,10 @@ font-size:3rem ;
     transition: all .4s ease 0s !important;
     /* vertical-align: middle !important; */
 }
+.coding{
+  font-weight: 900;
+
+}
 .project-heading {
     color: #0c0c0c !important;
     font-size: 2.3em !important;
