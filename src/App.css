@@ -20,3 +20,10 @@ body,html{
   width: 100%;
   overflow-x: hidden;
 }
+body{
+  background-image: url("../public/bgm.jpg");
+  background-attachment: fixed;
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
