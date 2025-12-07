@@ -1,55 +1,78 @@
 import './typed.css'
 import varunS from './assets/varunS.pdf'
+import { useEffect, useState } from 'react'
 
-function Navigation(){
-  //container-fluid position-relative d-flex align-items-center justify-content-between
-    return(
+function Navigation({ theme = 'light', onToggleTheme }) {
+  const [open, setOpen] = useState(false)
 
-         <nav className='navbar navbar-expand-md navbar-light fixed-top' id='navbar'>
-        <div className='container-xxl'>
-          <a href='#intro' className='navbar-brand'>
-            <span className='fw-bold text-black'>
-              <h3>VS</h3>
-            </span>
-          </a>
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setOpen(false)
+      }
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
-           <button className='navbar-toggler secondary' type="button"
-            data-bs-toggle="collapse"
-      data-bs-target="#main-nav" aria-controls="main-nav" 
-      aria-expanded="false"
-      aria-label="Toggle navigation" style={{backgroundcolor:"white"}}>
-        <span className='navbar-toggler-icon'style={{backgroundColor:"white",
-          padding:"2px"}}></span>
-      </button>
+  return (
+    <nav className="main-navbar fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-soft">
 
+      <div className='max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'>
 
-      <div className='collapse navbar-collapse justify-content-end align-center'
-      id="main-nav">
-        <ul className='navbar-nav'>
-          <li className='nav-item me-4'>
-            <a className='nav-link fw-bold custom-hover text-black' href='#About-me'>ABOUT ME</a>
-          </li>
-          <li className='nav-item me-4'>
-            <a className='nav-link fw-bold text-black custom-hover' href='http://github.com/Varunn4875'target='_blank' rel='noopener noreferrer' >PROJECTS</a>
-          </li>
-          {/* <li className='nav-item'>
-            <a className='nav-link fw-bold text-white' href='#contact'>Get in touch</a>
-          </li> */}
-          <li className='nav-item me-4'>
-            <a className='nav-link fw-bold text-black custom-hover' href={varunS} target='_blank' rel='noopener noreferrer'>RESUME</a>
-          </li>
-           <li className='nav-item me-4'>
-            <a className='nav-link fw-bold text-info custom-hover text-black' href='#'>BLOGS</a>
-          </li>
-          <li className='nav-item ms-2 d-none d-md-inline me-4'>
-            <a className='btn btn-success bi bi-whatsapp fw-bold text-white'> : 9360141042</a>
-          </li>
+        <a href="#intro" className="flex items-center">
+          <img src="/vs.png" alt="VS Logo" className="brand-logo" />
+        </a>
 
-        </ul>
+        <div className='hidden md:flex tw-md-flex items-center gap-8'>
+          <a className='nav-link px-3 py-2 rounded-md' href='#About-me'>ABOUT ME</a>
+          <a className='nav-link px-3 py-2 rounded-md' href='https://github.com/Varunn4875' target='_blank' rel='noopener noreferrer'>PROJECTS</a>
+          <a className='nav-link px-3 py-2 rounded-md' href={varunS} target='_blank' rel='noopener noreferrer'>RESUME</a>
+          <a className='nav-link px-3 py-2 rounded-md' href='#contact'>GET IN TOUCH</a>
+
+          {/* Theme Button */}
+          <button
+            type='button'
+            className='rounded-full border border-soft bg-surface px-3 py-2 text-theme'
+            onClick={onToggleTheme}
+          >
+            <i className={`bi ${theme === 'dark' ? 'bi-sun' : 'bi-moon'}`} />
+          </button>
+        </div>
+
+        <button
+          type='button'
+          className='md:hidden tw-md-hidden inline-flex items-center justify-center rounded-md border border-soft bg-surface p-2 text-theme'
+          onClick={() => setOpen(!open)}
+        >
+          <i className={`bi ${open ? 'bi-x-lg' : 'bi-list'} text-xl`} />
+        </button>
       </div>
-      </div>
-      </nav>
-    )
 
+      {open && (
+        <div className='md:hidden px-4 pb-3'>
+          <div className='flex flex-col gap-4 bg-surface border border-soft rounded-xl p-4'>
+
+            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#About-me' onClick={() => setOpen(false)}>ABOUT ME</a>
+            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='https://github.com/Varunn4875' target='_blank' rel='noopener noreferrer' onClick={() => setOpen(false)}>PROJECTS</a>
+            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href={varunS} target='_blank' rel='noopener noreferrer' onClick={() => setOpen(false)}>RESUME</a>
+            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#contact' onClick={() => setOpen(false)}>GET IN TOUCH</a>
+
+            <div className='flex justify-end'>
+              <button
+                type='button'
+                className='rounded-full border border-soft bg-surface px-3 py-2 text-theme'
+                onClick={onToggleTheme}
+              >
+                <i className={`bi ${theme === 'dark' ? 'bi-sun' : 'bi-moon'}`} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
+  )
 }
+
 export default Navigation

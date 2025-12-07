@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bridge Tailwind with theme variables for text */
+.text-theme { color: var(--text-color); }
+.bg-surface { background: var(--surface); }
+.border-soft { border-color: var(--border-soft); }

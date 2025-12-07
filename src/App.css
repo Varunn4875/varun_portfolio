@@ -1,18 +1,61 @@
 
+:root[data-theme="light"]{
+  --bg-color: rgba(255,255,255,1);
+  --bg-gradient: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+  --text-color: #0e0e0e;
+  --heading-color: #0c0c0c;
+  --accent-color: #00ffcc;
+  --card-bg: rgba(255,255,255,0.75);
+  --card-border: rgba(0,0,0,0.25);
+  --link-underline: #000000;
+  --link-hover: #00ffcc;
+  --nav-bg: rgba(255,255,255,0.45);
+  --surface: rgba(255,255,255,0.85);
+  --border-soft: rgba(0,0,0,0.08);
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.08);
+  --heading-grad-start: #2a6df6;
+  --heading-grad-end: #7a3cf8;
+}
+
+:root[data-theme="dark"]{
+  --bg-color: #0b0d12;
+  --bg-gradient: linear-gradient(180deg, #0b1220 0%, #0f1b2d 100%);
+  --text-color: #e6e6e6;
+  --heading-color: #ffffff;
+  --accent-color: #00ffcc;
+  --card-bg: rgba(17,17,17,0.6);
+  --card-border: rgba(255,255,255,0.25);
+  --link-underline: #ffffff;
+  --link-hover: #00ffcc;
+  --nav-bg: rgba(0,0,0,0.35);
+  --surface: rgba(18,24,38,0.85);
+  --border-soft: rgba(255,255,255,0.08);
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.45);
+  --heading-grad-start: #6aa7ff;
+  --heading-grad-end: #b184ff;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
 .Animated-typing{
     margin: 15%;
     padding: 15%;
     font-size: 3rem;
-    color:aqua;
+    color: var(--accent-color);
     font-weight:600;
-    text-shadow:2px 2px black;
+    text-shadow:2px 2px rgba(0,0,0,0.35);
 }
 *{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   /* font-weight: 400; */
   font-style: normal;
-  color: black;
 }
 body,html{
   margin: 0;
@@ -21,9 +64,281 @@ body,html{
   overflow-x: hidden;
 }
 body{
-  background-image: url("../public/bgm.jpg");
-  background-attachment: fixed;
-  background-position: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  color: var(--text-color);
 }
+
+/* Navbar link color to follow theme */
+.navbar .nav-link{
+  color: var(--text-color) !important;
+}
+
+.navbar-nav{
+  gap: 18px;
+}
+
+.navbar .nav-link{
+  padding: 0.5rem 0.75rem;
+}
+
+/* Card-like blocks */
+.tech-icons{
+  background-color: var(--card-bg);
+  border-color: var(--card-border) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadow-soft) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* Dark theme compatibility for explicit classes */
+.theme-dark .text-black{ color: var(--text-color) !important; }
+
+/* Generic themed surface card */
+.themed-card{
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  color: var(--text-color);
+}
+
+/* Navbar polish */
+.navbar{
+  background: var(--nav-bg) !important;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 6px 12px;
+  margin-top: 6px;
+}
+.chip{
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  color: var(--text-color);
+  padding: 10px 14px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  font-weight: 600;
+}
+.chip:hover{
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.chips-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.group-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+.group-dot{ width: 10px; height: 10px; border-radius: 50%; background: var(--accent-color); display: inline-block; }
+.group-dot.green{ background: #1ee0a5; }
+.group-dot.pink{ background: #ff4fd1; }
+
+.about-text{ font-size: 1.125rem; line-height: 1.8; }
+.about-list{ list-style: none; padding-left: 0; }
+.about-list li{ margin-bottom: 8px; }
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.nav-links .nav-link{
+  padding: 6px 8px;
+}
+/* ------------------------------------
+   Animated Typing Section
+-------------------------------------*/
+#Animated-typing {
+  margin: 15px;
+  padding: 15px;
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  width: 500px;
+  height: 500px;
+  margin-top: 10%;
+  margin-bottom: 0%;
+}
+
+#Animated-typing h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ------------------------------------
+   Social Links
+-------------------------------------*/
+.social-links {
+  margin-top: 24px;
+}
+
+.social-links a {
+  padding: 15px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 3rem;
+}
+
+.social-links a:hover i {
+  color: var(--accent-color);
+}
+
+/* ------------------------------------
+   Tech Icons
+-------------------------------------*/
+.tech-icons {
+  border: 1.7px solid rgba(4, 0, 5, 0.637);
+  border-radius: 5px;
+  box-shadow: 4px 5px 4px 3px rgba(4, 0, 8, 0.137);
+  font-size: 4.5em;
+  margin: 15px;
+  opacity: .93;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  transition: all .4s ease;
+}
+
+.tech-icons i {
+  color: var(--text-color);
+}
+
+.tech-icons:hover i {
+  color: var(--accent-color);
+}
+
+.tech-icons:hover {
+  padding: 12px;
+}
+
+/* ------------------------------------
+   Underline Hover Animation
+-------------------------------------*/
+.custom-hover {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative; /* FIXED — no more sticky */
+}
+
+.custom-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0%;
+  background-color: var(--link-underline);
+  transition: 0.5s ease;
+}
+
+.custom-hover:hover::after {
+  width: 100%;
+}
+
+.custom-hover:hover {
+  color: var(--link-hover);
+}
+
+/* ------------------------------------
+   Navbar Wrapper (Safe Sticky)
+-------------------------------------*/
+.main-navbar {
+  position: sticky;
+  top: 0;
+  background: var(--nav-bg);
+  backdrop-filter: blur(1.7px);
+  z-index: 50;
+}
+
+/* ------------------------------------
+   Hero Section
+-------------------------------------*/
+.hero {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.75rem;
+  color: var(--heading-color);
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.hero-pill {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  color: var(--text-color);
+}
+
+.hero-typed {
+  margin-top: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.hero-actions {
+  margin-top: 22px;
+}
+
+.hero-actions .btn {
+  padding: 10px 18px;
+}
+
+/* ------------------------------------
+   Fade Animation (used by mobile menu)
+-------------------------------------*/
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+.nav-link{ color: var(--text-color); text-decoration: none; font-weight: 600; }
+.nav-link:hover{ color: var(--accent-color); }
+
+/* Force navbar link color to respect theme, especially in dark mode */
+.main-navbar .nav-link{ color: var(--heading-color) !important; }
+.main-navbar .nav-link:hover{ color: var(--accent-color) !important; }
+
+/* Add more breathing room in the top bar */
+.main-navbar .max-w-7xl{ padding-left: 1rem; padding-right: 1rem; }
+
+.brand-logo{ width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.brand-text{ font-family: "Montserrat", sans-serif; font-weight: 800; color: var(--heading-color); font-size: 1.25rem; }
+.main-navbar .nav-link{ font-family: "Montserrat", sans-serif; font-weight: 600; letter-spacing: 0.3px; }
