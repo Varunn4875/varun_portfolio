@@ -12,7 +12,7 @@
   }
 
 #Animated-typing h1{
-  font-family: "Montserrat", sans-serif;
+  font-family: "Libertinus Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -58,6 +58,7 @@ font-size:3rem ;
     display: block;
     font-size: 2em;
     text-align: center;
+    margin-block-end: 30px;
     /* font-family: "Audiowide", sans-serif; */
 }
 .tech-icons i{ color: var(--text-color); }
@@ -106,8 +107,6 @@ font-size:3rem ;
   backdrop-filter: blur(1.7px);
   z-index: 50;
 }
-
-
 .hero{
   padding-top: 120px;
   padding-bottom: 60px;

@@ -52,7 +52,7 @@
     text-shadow:2px 2px rgba(0,0,0,0.35);
 }
 *{
-  font-family: "Montserrat", sans-serif;
+  font-family: "Libertinus Mono", monospace;
   font-optical-sizing: auto;
   /* font-weight: 400; */
   font-style: normal;
@@ -119,10 +119,13 @@ body{
   border-radius: 999px;
   box-shadow: var(--shadow-soft);
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 .chip:hover{
   border-color: var(--accent-color);
   color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .chips-grid{
@@ -173,7 +176,7 @@ body{
 }
 
 #Animated-typing h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Libertinus Mono", monospace;
   font-weight: 700;
   background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
   -webkit-background-clip: text;
@@ -340,5 +343,5 @@ body{
 .main-navbar .max-w-7xl{ padding-left: 1rem; padding-right: 1rem; }
 
 .brand-logo{ width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
-.brand-text{ font-family: "Montserrat", sans-serif; font-weight: 800; color: var(--heading-color); font-size: 1.25rem; }
-.main-navbar .nav-link{ font-family: "Montserrat", sans-serif; font-weight: 600; letter-spacing: 0.3px; }
+.brand-text{ font-family: "Libertinus Mono", monospace; font-weight: 800; color: var(--heading-color); font-size: 1.25rem; }
+.main-navbar .nav-link{ font-family: "Libertinus Mono", monospace; font-weight: 600; letter-spacing: 0.3px; text-transform: capitalize; }
