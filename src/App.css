@@ -262,12 +262,15 @@ body{
    Navbar Wrapper (Safe Sticky)
 -------------------------------------*/
 .main-navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   background: var(--nav-bg);
-  backdrop-filter: blur(1.7px);
-  z-index: 50;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
 }
+
 
 /* ------------------------------------
    Hero Section

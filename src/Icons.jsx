@@ -2,11 +2,11 @@ import './typed.css'
 
 function Icons(){
     const skillChips = [
-       "Html","CSS","Bootstrap","JavaScript","Bootstrap","TailwindCSS","ReactJS","Flutter","NodeJS","ExpressJS" 
+       "Html","CSS","Bootstrap","JavaScript","TypeScript","Bootstrap","TailwindCSS","ReactJS","Flutter","NodeJS","ExpressJS" 
     ]
 
     const cloudTools = [
-       'MongoDB','SQL','Git','GitHub'
+       'MongoDB','GraphQl','SQL','Git','GitHub','Postman'
     ]
 
     // const coreConcepts = [
@@ -15,7 +15,7 @@ function Icons(){
 
     return(
         <>
-          <h1 className="project-heading">Professional Skillset</h1>
+          <h1 className="project-heading ">Professional Skillset</h1>
           <div className="container">
             <div className="chips-grid">
               {skillChips.map((label) => (
@@ -24,7 +24,7 @@ function Icons(){
             </div>
           </div>
 
-          <h1 className="project-heading">Cloud, Databases & Tools</h1>
+          <h1 className="project-heading"> Databases & Tools</h1>
           <div className="container">
             <div className="chips-grid">
               {cloudTools.map((label) => (
