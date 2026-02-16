@@ -2,7 +2,7 @@ import './typed.css'
 
 function Icons(){
     const skillChips = [
-       "Html","CSS","Bootstrap","JavaScript","TypeScript","Bootstrap","TailwindCSS","ReactJS","Flutter","NodeJS","ExpressJS" 
+       "Html","CSS","Bootstrap","JavaScript","TypeScript","TailwindCSS","ReactJS","Flutter","NodeJS","ExpressJS" 
     ]
 
     const cloudTools = [
