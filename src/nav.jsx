@@ -1,5 +1,4 @@
 import './typed.css'
-import varunS from './assets/varunS.pdf'
 import { useEffect, useState } from 'react'
 
 function Navigation({ theme = 'light', onToggleTheme }) {
@@ -28,7 +27,7 @@ function Navigation({ theme = 'light', onToggleTheme }) {
         <div className='hidden md:flex tw-md-flex items-center gap-8'>
           <a className='nav-link px-3 py-2 rounded-md' href='#About-me'>about me</a>
           <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#projects'   onClick={() => setOpen(false)}>projects</a>
-          <a className='nav-link px-3 py-2 rounded-md' href={varunS} target='_blank' rel='noopener noreferrer'>resume</a>
+          <a className='nav-link px-3 py-2 rounded-md' href='/varuns.pdf' target='_blank' rel='noopener noreferrer'>resume</a>
           <a className='nav-link px-3 py-2 rounded-md' href='#contact'>get in touch</a>
 
           {/* Theme Button */}
@@ -56,7 +55,7 @@ function Navigation({ theme = 'light', onToggleTheme }) {
 
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#About-me' onClick={() => setOpen(false)}>about me</a>
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#projects'   onClick={() => setOpen(false)}>projects</a>
-            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href={varunS} target='_blank' rel='noopener noreferrer' onClick={() => setOpen(false)}>resume</a>
+            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='/varuns.pdf' target='_blank' rel='noopener noreferrer' onClick={() => setOpen(false)}>resume</a>
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#contact' onClick={() => setOpen(false)}>get in touch</a>
 
             <div className='flex justify-end'>
