@@ -5,6 +5,8 @@ import AboutSection from './About';
 import Icons from './Icons';
 import Contact from './Contact';
 import './App.css'
+import './Projects'
+import Projects from './Projects';
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
@@ -26,6 +28,7 @@ function App() {
        <Typing/>
        <AboutSection/>
        <Icons/>
+       <Projects/>
        <Contact/>
     </>
   )
