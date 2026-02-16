@@ -11,6 +11,14 @@ function Projects() {
       image: "/images/wapp.png", // add screenshot
     },
     {
+       title: "TechCorp ",
+       description:
+          "Corporate website showcasing software solutions, digital innovation services, and business transformation.",
+       tech: ["React", "Next.js", "Responsive UI", "Modern Design"],
+       live: "https://tech-corp-omega.vercel.app/",
+  
+    },
+    {
       title: "TripNest",
       description:
         "Travel planning and booking interface with clean UX and dynamic layouts.",
@@ -26,17 +34,19 @@ function Projects() {
       live: "https://varunn4875.github.io/Rapid-Keys/",
       image: "/images/rapidkeys.png",
     },
+
+
   ];
 
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <h1 className="project-heading">Featured Projects</h1>
 
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.title} className="project-card">
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+              {/* <img src={project.image} alt={project.title} /> */}
             </div>
 
             <div className="project-content">

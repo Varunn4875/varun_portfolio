@@ -27,7 +27,7 @@ function Navigation({ theme = 'light', onToggleTheme }) {
 
         <div className='hidden md:flex tw-md-flex items-center gap-8'>
           <a className='nav-link px-3 py-2 rounded-md' href='#About-me'>about me</a>
-          <a className='nav-link px-3 py-2 rounded-md' href='https://github.com/Varunn4875' target='_blank' rel='noopener noreferrer'>projects</a>
+          <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#projects'   onClick={() => setOpen(false)}>projects</a>
           <a className='nav-link px-3 py-2 rounded-md' href={varunS} target='_blank' rel='noopener noreferrer'>resume</a>
           <a className='nav-link px-3 py-2 rounded-md' href='#contact'>get in touch</a>
 
@@ -55,7 +55,7 @@ function Navigation({ theme = 'light', onToggleTheme }) {
           <div className='flex flex-col gap-4 bg-surface border border-soft rounded-xl p-4'>
 
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#About-me' onClick={() => setOpen(false)}>about me</a>
-            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='https://github.com/Varunn4875' target='_blank' rel='noopener noreferrer' onClick={() => setOpen(false)}>projects</a>
+            <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#projects'   onClick={() => setOpen(false)}>projects</a>
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href={varunS} target='_blank' rel='noopener noreferrer' onClick={() => setOpen(false)}>resume</a>
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#contact' onClick={() => setOpen(false)}>get in touch</a>
 

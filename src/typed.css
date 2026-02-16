@@ -28,6 +28,13 @@ color: var(--text-color);
 font-size:1rem ;
 
 }
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .hero-title, .project-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
 
 .tech-icons{
     border: 1.7px solid rgba(4, 0, 5, 0.637) !important;
@@ -106,6 +113,7 @@ font-size:1rem ;
   background: var(--nav-bg);
   backdrop-filter: blur(1.7px);
   z-index: 50;
+  font-family: 'Inter', sans-serif;
 }
 .hero{
   padding-top: 120px;
@@ -141,6 +149,7 @@ font-size:1rem ;
   margin-top: 18px;
   font-weight: 700;
   color: var(--accent-color);
+  font-family: 'Libertinus Mono', monospace;
 }
 .hero-actions{
   margin-top: 22px;
@@ -177,6 +186,7 @@ font-size:1rem ;
   font-weight: 600;
   margin-bottom: 50px;
   text-align: center;
+ color: var(--text-color);
 }
 
 .about-wrapper {
@@ -206,5 +216,6 @@ font-size:1rem ;
   margin-bottom: 20px;
   line-height: 1.8;
  color: var(--text-color);
+ font-family: 'Inter', sans-serif;
 }
 

@@ -68,6 +68,13 @@ body{
   background-image: var(--bg-gradient);
   color: var(--text-color);
 }
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .hero-title, .project-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
 
 /* Navbar link color to follow theme */
 .navbar .nav-link{
@@ -414,6 +421,7 @@ body{
 /* Content */
 .project-content {
   padding: 22px;
+  
 }
 
 .project-content h2 {
@@ -427,6 +435,7 @@ body{
   margin-bottom: 16px;
   opacity: 0.85;
   line-height: 1.6;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Tech Chips */
@@ -463,6 +472,7 @@ body{
   );
   color: white;
   border-radius: 999px;
+    font-family: 'Inter', sans-serif;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
