@@ -7,9 +7,12 @@
     
       return(
         <>
-        <section className='hero container-xl'>
-          <div className='hero-inner'>
-            <h1 className='hero-title'>Hi, I'm Varun</h1>
+        <section className='hero container-xl my-2 container-sm my-5'>
+          <div className='hero-inner '>
+            <h1 className="hero-title">
+  Hi, I'm Varun <span className="wave">👋</span>
+</h1>
+
             <h2 className='hero-subtitle'>Software Developer</h2>
             <div className='hero-pill'>Currently @ W3VJTech</div>
             <div className='hero-typed'>
@@ -27,7 +30,7 @@
               <a href="http://github.com/Varunn4875" target='_blank' rel='noopener noreferrer'><i className="bi bi-github fw-bold"></i></a>
               <a href="https://www.instagram.com/varunn_4875?igsh=MXNleXlwMzlmNXVubQ==" target='_blank' rel='noopener noreferrer'><i className="bi bi-instagram fw-bold"></i></a>
               <a href="https://wa.me/919360141042"><i className="bi bi-whatsapp fw-bold"></i></a>
-              <a href="https://www.linkedin.com/in/varunselvakumar4875/" target='_blank' rel='noopener noreferrer'><i className="bi bi-linkedin fw-bold"></i></a>
+              <a href="https://www.linkedin.com/in/varunselvakumar4875/" target='_blank' rel='noopener noreferrer'><i className="bi bi-linkedin fw-bold "></i></a>
               {/* <a href="mailto:varunselvakumar6@gmail.com"><i className="bi bi-envelope fw-bold"></i></a> */}
             </div>
           </div>

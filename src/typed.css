@@ -124,7 +124,7 @@ h1, h2, h3, .hero-title, .project-heading {
 }
 .hero-title{
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
   -webkit-background-clip: text;
   background-clip: text;
@@ -148,7 +148,7 @@ h1, h2, h3, .hero-title, .project-heading {
 .hero-typed{
   margin-top: 18px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: black;
   font-family: 'Libertinus Mono', monospace;
 }
 .hero-actions{
@@ -217,5 +217,24 @@ h1, h2, h3, .hero-title, .project-heading {
   line-height: 1.8;
  color: var(--text-color);
  font-family: 'Inter', sans-serif;
+}
+
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+  color: white;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 

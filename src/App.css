@@ -52,7 +52,7 @@
     text-shadow:2px 2px rgba(0,0,0,0.35);
 }
 *{
-  font-family: "Libertinus Mono", monospace;
+  font-family: "Inter", monospace;
   font-optical-sizing: auto;
   /* font-weight: 400; */
   font-style: normal;
@@ -73,7 +73,7 @@ body {
 }
 
 h1, h2, h3, .hero-title, .project-heading {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Navbar link color to follow theme */
@@ -292,16 +292,22 @@ h1, h2, h3, .hero-title, .project-heading {
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    var(--heading-grad-start),
+    var(--heading-grad-end)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+
 .hero-subtitle {
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
   color: var(--heading-color);
   opacity: 0.9;
   margin-top: 10px;
@@ -319,8 +325,11 @@ h1, h2, h3, .hero-title, .project-heading {
 
 .hero-typed {
   margin-top: 18px;
-  font-weight: 700;
-  color: var(--accent-color);
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-actions {
@@ -353,8 +362,8 @@ h1, h2, h3, .hero-title, .project-heading {
 .main-navbar .max-w-7xl{ padding-left: 1rem; padding-right: 1rem; }
 
 .brand-logo{ width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
-.brand-text{ font-family: "Libertinus Mono", monospace; font-weight: 800; color: var(--heading-color); font-size: 1.25rem; }
-.main-navbar .nav-link{ font-family: "Libertinus Mono", monospace; font-weight: 600; letter-spacing: 0.3px; text-transform: capitalize; }
+.brand-text{ font-family: "Inter", monospace; font-weight: 800; color: var(--heading-color); font-size: 1.25rem; }
+.main-navbar .nav-link{ font-family: "Inter", monospace; font-weight: 600; letter-spacing: 0.3px; text-transform: capitalize; }
 
 
 
@@ -483,3 +492,5 @@ h1, h2, h3, .hero-title, .project-heading {
   transform: translateY(-3px);
   opacity: 0.9;
 }
+
+
