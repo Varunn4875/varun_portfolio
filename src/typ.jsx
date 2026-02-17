@@ -9,9 +9,7 @@
         <>
         <section className='hero container-xl my-2 container-sm my-5'>
           <div className='hero-inner '>
-            <h1 className="hero-title">
-  Hi, I'm Varun <span className="wave">👋</span>
-</h1>
+            <h1 className="hero-title"><span className="wave">👋</span>&nbsp; Hi, I'm Varun</h1>
 
             <h2 className='hero-subtitle'>Software Developer</h2>
             <div className='hero-pill'>Currently @ W3VJTech</div>
