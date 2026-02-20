@@ -7,6 +7,7 @@ import Contact from './Contact';
 import './App.css'
 import './Projects'
 import Projects from './Projects';
+import Snowfall from 'react-snowfall';
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
@@ -25,11 +26,17 @@ function App() {
   return (
     <>
      <Navigation theme={theme} onToggleTheme={toggleTheme}/>
+     <Snowfall color='#2a6df6'
+     snowflakeCount={50}
+     speed={[0,5,2]}
+     wind={[0,1]}
+     radius={[0,5,3]}/>
        <Typing/>
        <AboutSection/>
        <Icons/>
        <Projects/>
        <Contact/>
+      
     </>
   )
 }
