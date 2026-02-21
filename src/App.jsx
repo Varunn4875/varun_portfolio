@@ -33,7 +33,7 @@ function App() {
   snowflakeCount={50}
   speed={[0, 5, 2]}
   wind={[0, 1]}
-  radius={[0, 5, 3]}
+  radius={[2,2]}
 />
        <Typing/>
        <AboutSection/>

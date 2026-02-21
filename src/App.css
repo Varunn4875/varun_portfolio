@@ -129,10 +129,11 @@ h1, h2, h3, .hero-title, .project-heading {
   transition: all 0.3s ease;
 }
 .chip:hover{
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+  border-color: #00ffcc;
+  color: #00ffcc;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  cursor: pointer;
 }
 
 .chips-grid{
