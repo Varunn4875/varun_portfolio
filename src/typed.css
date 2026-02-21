@@ -182,12 +182,19 @@ h1, h2, h3, .hero-title, .project-heading {
 }
 
 .section-heading {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 50px;
-  text-align: center;
- color: var(--text-color);
+  background: linear-gradient(90deg, var(--heading-grad-start), var(--heading-grad-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    font-size: 2.3em !important;
+    font-weight: 500 !important;
+    padding-top: 10px !important;
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    margin-block-end: 30px;
 }
+
 
 .about-wrapper {
   max-width: 850px;

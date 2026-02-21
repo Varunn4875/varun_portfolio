@@ -4,11 +4,11 @@
   --bg-gradient: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
   --text-color: #0e0e0e;
   --heading-color: #0c0c0c;
-  --accent-color: #00ffcc;
+  --accent-color: #2a6df6;
   --card-bg: rgba(255,255,255,0.75);
   --card-border: rgba(0,0,0,0.25);
   --link-underline: #000000;
-  --link-hover: #00ffcc;
+  --link-hover: #2a6df6;
   --nav-bg: rgba(255,255,255,0.45);
   --surface: rgba(255,255,255,0.85);
   --border-soft: rgba(0,0,0,0.08);
@@ -22,11 +22,11 @@
   --bg-gradient: linear-gradient(180deg, #0b1220 0%, #0f1b2d 100%);
   --text-color: #e6e6e6;
   --heading-color: #ffffff;
-  --accent-color: #00ffcc;
+  --accent-color: #2a6df6;
   --card-bg: rgba(17,17,17,0.6);
   --card-border: rgba(255,255,255,0.25);
   --link-underline: #ffffff;
-  --link-hover: #00ffcc;
+  --link-hover: #2a6df6;
   --nav-bg: rgba(0,0,0,0.35);
   --surface: rgba(18,24,38,0.85);
   --border-soft: rgba(255,255,255,0.08);
@@ -202,7 +202,7 @@ h1, h2, h3, .hero-title, .project-heading {
   padding: 15px;
   margin-bottom: 20px;
   color: var(--text-color);
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
 }
 
 .social-links a:hover i {
@@ -292,7 +292,7 @@ h1, h2, h3, .hero-title, .project-heading {
 }
 
 .hero-title {
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
   text-align: center;
   background: linear-gradient(
@@ -307,7 +307,7 @@ h1, h2, h3, .hero-title, .project-heading {
 
 
 .hero-subtitle {
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
   color: var(--heading-color);
   opacity: 0.9;
   margin-top: 10px;
@@ -352,7 +352,7 @@ h1, h2, h3, .hero-title, .project-heading {
   animation: fadeIn 0.25s ease-out forwards;
 }
 .nav-link{ color: var(--text-color); text-decoration: none; font-weight: 600; }
-.nav-link:hover{ color: var(--accent-color); }
+.nav-link:hover{ color: var( --heading-grad-start); }
 
 /* Force navbar link color to respect theme, especially in dark mode */
 .main-navbar .nav-link{ color: var(--heading-color) !important; }
