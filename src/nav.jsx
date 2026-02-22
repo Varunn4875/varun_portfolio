@@ -1,5 +1,7 @@
 import './typed.css'
 import { useEffect, useState } from 'react'
+import { CiDark } from 'react-icons/ci'
+import { CiLight } from 'react-icons/ci'
 
 function Navigation({ theme = 'light', onToggleTheme }) {
   const [open, setOpen] = useState(false)
@@ -34,13 +36,19 @@ function Navigation({ theme = 'light', onToggleTheme }) {
           <a className='nav-link px-3 py-2 rounded-md' href='#contact'>get in touch</a>
 
           {/* Theme Button */}
-          <button
+          {/* <button
             type='button'
             className='rounded-full border border-none bg-surface px-3 py-2 text-theme'
             onClick={onToggleTheme}
           >
             <i className={`bi ${theme === 'dark' ? 'bi-sun' : 'bi-moon'}`} />
-          </button>
+          </button> */}
+
+          {theme === 'dark' ? (
+            <button className='cilight' onClick={onToggleTheme}><CiLight/></button>
+          ) : (
+            <button className='cilight' onClick={onToggleTheme}><CiDark/></button>
+          )}
         </div>
 
         <button
@@ -62,13 +70,11 @@ function Navigation({ theme = 'light', onToggleTheme }) {
             <a className='nav-link px-2 py-1 rounded-md text-theme hover:text-[var(--accent-color)]' href='#contact' onClick={() => setOpen(false)}>get in touch</a>
 
             <div className='flex justify-end'>
-              <button
-                type='button'
-                className='rounded-full border border-soft bg-surface px-3 py-2 text-theme'
-                onClick={onToggleTheme}
-              >
-                <i className={`bi ${theme === 'dark' ? 'bi-sun' : 'bi-moon'}`} />
-              </button>
+                 {theme === 'dark' ? (
+            <button className='cilight' onClick={onToggleTheme}><CiLight/></button>
+          ) : (
+            <button className='cilight' onClick={onToggleTheme}><CiDark/></button>
+          )}
             </div>
           </div>
         </div>
