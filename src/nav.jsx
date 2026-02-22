@@ -20,9 +20,12 @@ function Navigation({ theme = 'light', onToggleTheme }) {
 
       <div className='max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'>
 
-        <a href="#intro" className="flex items-center">
-          <img src="/vs.png" alt="VS Logo" className="brand-logo" />
-        </a>
+     
+          {/* <img src="/vs.png" alt="VS Logo" className="brand-logo" /> */}
+
+          <button className='vs'>VS</button> 
+
+        
 
         <div className='hidden md:flex tw-md-flex items-center gap-8'>
           <a className='nav-link px-3 py-2 rounded-md' href='#About-me'>about me</a>
@@ -33,7 +36,7 @@ function Navigation({ theme = 'light', onToggleTheme }) {
           {/* Theme Button */}
           <button
             type='button'
-            className='rounded-full border border-soft bg-surface px-3 py-2 text-theme'
+            className='rounded-full border border-none bg-surface px-3 py-2 text-theme'
             onClick={onToggleTheme}
           >
             <i className={`bi ${theme === 'dark' ? 'bi-sun' : 'bi-moon'}`} />

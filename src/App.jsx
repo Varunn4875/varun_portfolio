@@ -31,7 +31,7 @@ function App() {
     <Snowfall
   color={theme === 'dark' ? '#ffffff' : '#2a6df6'}
   snowflakeCount={50}
-  speed={[0, 5, 2]}
+  speed={[0, 1, 1]}
   wind={[0, 1]}
   radius={[2,2]}
 />
