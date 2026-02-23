@@ -7,7 +7,7 @@ function Icons(){
 
     const cloudTools = [
        'MongoDB','MySQL','PostgreSql','Git','GitHub','Postman'
-    ]
+    ] 
 
     // const coreConcepts = [
     //   'System Design','Microservices','API Development','State Management','Agile Methodologies'
