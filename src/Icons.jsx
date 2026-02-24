@@ -6,7 +6,7 @@ function Icons(){
     ]
 
     const cloudTools = [
-       'MongoDB','MySQL','PostgreSql','Git','GitHub','Postman'
+       'MongoDB','MySQL','PostgreSql','NoSql','Git','GitHub','Postman'
     ] 
 
     // const coreConcepts = [
